@@ -1,0 +1,213 @@
+  We are getting Error while adding Newspapers to the list of Selected Newspaper. The same issue we reported previously and raised a defect for the same.
+  Defect no: 13865
+  
+  
+  CR 8797
+  
+  Programmers develop application by breaking them into small objects.The code is easy to maintain as the objects are self contained, cohesive units developed for specific functionalities.
+  The objects can be reused to perform similar logics.
+  
+  Object:
+  
+   Objects has two characteristics
+   State – State of the object.
+   Behavior – Behavior of the object, it changes the state of the object.
+   ie: Car is a object,Speed of the car which represents the state of the car.(State)
+   Operations such as start/stop the car and apply brake are behaviors of the car.
+   
+   The behavior “accelerate the speed” changes the car’s state “speed”.
+   Real world object:
+   Software objects have the same characteristics,
+   State  - Stored in fields.
+   Behavior – Exposed through methods. Methods changes the state of the objects
+   In a net banking application where user can,
+      Check account status.
+      Check account balance.
+      Transfer amount.
+  The system will be represented with a “Account” object.
+      Account Objects Characterstics:
+
+	  Methods (Behaviors)   Fields (States)
+      Check Account Status   Account Status
+       Transfer Amount        Account Balance
+      Check Account Balance
+
+   Class:
+   A class is the blueprint from which individual objects are created.
+   Class defines the states and behavior of an object.
+
+   Inheritance
+   ============
+   Allows classes to inherit the state and behavior from other classes.
+   
+   Programmer is the subclass and Employee is the superclass. The relationship between the two classes is Programmer IS-A Employee.
+   It means that Programmer is a type of Employee.
+
+    class Employee
+	 {  
+     float salary=40000;  
+     }  
+     class Programmer extends Employee
+	 {  
+     int bonus=10000;  
+     public static void main(String args[])
+	 {  
+      Programmer p=new Programmer();  
+      System.out.println("Programmer salary is:"+p.salary);  
+      System.out.println("Bonus of Programmer is:"+p.bonus);  
+    }  
+    }  
+   
+   Over ridding:
+   
+   When a method in a subclass has the same name, same parameters or signature and same return type(or sub-type) as a method in its super-class,
+   then the method in the subclass is said to override the method in the super-class.
+   Method overriding is one of the way by which java achieve Run Time Polymorphism.
+   Overriding allows a child class to provide a specific implementation of a method that is already provided its parent class.
+   
+   //Creating a parent class. 
+   
+    class Bank
+	{  
+       int getRateOfInterest()
+	   {return 0;}  
+    }  
+//Creating child classes.  
+
+    class SBI extends Bank
+	{  
+     int getRateOfInterest()
+	 {return 8;}  
+    }  
+  
+   class ICICI extends Bank
+   {  
+   int getRateOfInterest()
+   {return 7;}  
+   }  
+   
+   class AXIS extends Bank
+   {  
+   int getRateOfInterest()
+   {return 9;}  
+    } 
+	
+  //Test class to create objects and call the methods 
+  
+   class Test2
+   {  
+    public static void main(String args[])
+	{  
+    SBI s=new SBI();  
+    ICICI i=new ICICI();  
+    AXIS a=new AXIS();  
+	
+     System.out.println("SBI Rate of Interest: "+s.getRateOfInterest());  
+     System.out.println("ICICI Rate of Interest: "+i.getRateOfInterest());  
+     System.out.println("AXIS Rate of Interest: "+a.getRateOfInterest());  
+    }  
+  }  
+   
+   Over loading:
+   
+   Overloading occurs when two or more methods in one class have the same method name but different parameters.
+   Method overloading increases the readability of the program.
+   Method Overloading is not possible by changing the return type of the method only.
+   
+   ways to overload the method:
+        By changing number of arguments
+        By changing the data type
+		
+	1) Method Overloading: changing no. of arguments
+	
+	 class Multiplier
+	 {  
+     static int multiply(int a,int b)
+	 {return a+b;}  
+     static int multiply(int a,int b,int c)
+	 {return a+b+c;}  
+     }  
+	 
+     class TestOverloading1
+	 {  
+      public static void main(String[] args)
+	  {  
+       System.out.println(Multiplier.multiply(11,11));  
+       System.out.println(Adder.multiply(11,11,11));  
+      }
+	  }  
+	  2) Method Overloading: changing data type of arguments
+	  
+	    class Adder
+		{  
+      static int add(int a, int b)
+	  {
+	  return a+b;
+	  }  
+      static double add(double a, double b)
+	  {return a+b;}  
+       }  
+      class TestOverloading2
+	  {  
+     public static void main(String[] args)
+	 {  
+     System.out.println(Adder.add(11,11));  
+     System.out.println(Adder.add(12.3,12.6));  
+     }}  
+
+   Encapsulation
+   ===============
+   Hiding internal state and requiring all interaction to be performed through an object's methods is known as data encapsulation.
+   Example: The father is called the “Super” class and the son is called the “Sub”class.
+      The inheriting class contains all the attributes and behaviours of its parent class.
+      Ideally all the methods which needs to be reused are placed in the parent class
+      The inheriting class can override the definition of existing methods by providing its own implementation.
+
+    Example: In the net banking application the “account balance” is hidden and can be accessed only through the “account transfer “method.
+
+   Polymorphism
+   ===============
+   Polymorphism is one of the OOPs feature that allows us to perform a single action in different ways. For example, lets say we have a class Animal that has a method sound().
+   Since this is a generic class so we can’t give it a implementation like: Roar, Meow, Oink etc. We had to give a generic message.
+   
+   public class Animal
+   {
+   
+   public void sound()
+   {
+      System.out.println("Animal is making a sound");   
+   }
+    }
+   we two subclasses of Animal class: Horse and Cat that extends (see Inheritance) Animal class. We can provide the implementation to the same method like this:
+   public class Horse extends Animal
+   {
+    @Override
+    public void sound()
+	{
+        System.out.println("Neigh");
+    }
+     }
+	 
+	 public class Cat extends Animal
+	 {
+      @Override
+      public void sound()
+	  {
+        System.out.println("Meow");
+       }
+      }
+	  
+	 Example of polymorphism (feature that allows us to perform a single action in different ways).
+	 It would not make any sense to just call the generic sound() method as each Animal has a different sound.
+	 Thus we can say that the action this method performs is based on the type of object.
+   
+   
+   Overloading occurs when two or more methods in one class have the same method name but different parameters. 
+   Overriding means having two methods with the same method name and parameters (i.e., method signature). 
+   One of the methods is in the parent class and the other is in the child class.
+   
+   main method can be overloaded but cannot be overridden in Java. 
+
+
+
+
