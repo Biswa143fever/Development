@@ -1,0 +1,14 @@
+﻿  We are getting Error while adding Newspapers to the list of Selected Newspaper. The same issue we reported previously and raised a defect for the same.
+  Defect no: 13865
+  
+  
+  lation.
+   Example: The father is called the “Super” class and the son is called the “Sub”class.
+      The inheriting class contains all the attributes and behaviours of its parent class.
+      Ideally all the methods which needs to be reused are placed in the parent class
+      The inheriting class can override the definition of existing methods by providing its own implementation.
+
+    Example: In the net banking application the “account balance” is hidden and can be accessed only through the “account transfer “method.
+
+   Polymorphism
+   

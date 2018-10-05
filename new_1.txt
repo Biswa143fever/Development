@@ -1,7 +1,7 @@
-  We are getting Error while adding Newspapers to the list of Selected Newspaper. The same issue we reported previously and raised a defect for the same.
+﻿  We are getting Error while adding Newspapers to the list of Selected Newspaper. The same issue we reported previously and raised a defect for the same.
   Defect no: 13865
   
-  
+  Ha aha aha-------it is working perfectly
   CR 8797
   
   Programmers develop application by breaking them into small objects.The code is easy to maintain as the objects are self contained, cohesive units developed for specific functionalities.

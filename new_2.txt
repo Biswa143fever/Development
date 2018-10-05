@@ -1,0 +1,40 @@
+﻿  We are getting Error while adding Newspapers to the list of Selected Newspaper. The same issue we reported previously and raised a defect for the same.
+  Defect no: 13865
+  
+  
+  CR 8797
+  
+  Programmers develop application by breaking them into small objects.The code is easy to maintain as the objects are self contained, cohesive units developed for specific functionalities.
+  The objects can be reused to perform similar logics.
+  
+  Object:
+  
+   Objects has two characteristics
+   State – State of the object.
+   Behavior – Behavior of the object, it changes the state of the object.
+   ie: Car is a object,Speed of the car which represents the state of the car.(State)
+   Operations such as start/stop the car and apply brake are behaviors of the car.
+   
+   The behavior “accelerate the speed” changes the car’s state “speed”.
+   Real world object:
+   Software objects have the same characteristics,
+   State  - Stored in fields.
+   Behavior – Exposed through methods. Methods changes the state of the objects
+   In a net banking application where user can,
+      Check account status.
+      Check account balance.
+      Transfer amount.
+  The system will be represented with a “Account” object.
+      Account Objects Characterstics:
+
+	  Methods (Behaviors)   Fields (States)
+      Check Account Status   Account Status
+       Transfer Amount        Account Balance
+      Check Account Balance
+
+   Class:
+   A class is the blueprint from which individual objects are created.
+   Class defines the states and behavior of an object.
+
+   
+   
