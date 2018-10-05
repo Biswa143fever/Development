@@ -24,3 +24,5 @@ Click on the search section on Left hand side
 Enter The AR no (Generated in MAS Pro CM) and click on search button
 System should allow user to enter value for AR and display AR details page.
 Verify the "Merch Complete"date and status of the AR created in AR detail page
+
+Modification in first branch
